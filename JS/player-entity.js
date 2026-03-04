@@ -64,7 +64,7 @@ export const player_entity = (() => {
 
     _LoadModels() {
       const loader = new FBXLoader();
-      loader.setPath('./resources/guard/');
+      loader.setPath('./FBX/GUARD/');
       loader.load('castle_guard_01.fbx', (fbx) => {
         this._target = fbx;
         this._target.scale.setScalar(0.035);
@@ -108,7 +108,7 @@ export const player_entity = (() => {
         };
   
         const loader = new FBXLoader(this._manager);
-        loader.setPath('../FBX/GUARD/');
+        loader.setPath('./FBX/GUARD/');
         loader.load('Sword And Shield Idle.fbx', (a) => { _OnLoad('idle', a); });
         loader.load('Sword And Shield Run.fbx', (a) => { _OnLoad('run', a); });
         loader.load('Sword And Shield Walk.fbx', (a) => { _OnLoad('walk', a); });
