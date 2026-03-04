@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118.1/build/three.module.js';
-import {entity} from 'JS/entity.js';
-import {math} from 'JS/math.js';
+import {entity} from './entity.js';
+import {math} from './math.js';
 
 export const attack_controller = (() => {
   class AttackController extends entity.Component {
