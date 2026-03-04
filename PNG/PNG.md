@@ -84,9 +84,6 @@
 
     <div class="splash-container">
         <img src="gengine.png" alt="GENGINE Logo" class="gengine-icon">
-        
-        <h1 class="gengine-title">GENGINE</h1>
-        
         <p class="gengine-subtitle">Seu Framework JavaScript para Jogos</p>
     </div>
 
