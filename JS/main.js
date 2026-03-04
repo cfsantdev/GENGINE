@@ -162,7 +162,7 @@ class HackNSlashDemo {
       const e = new entity.Entity();
       e.AddComponent(new gltf_component.StaticModelComponent({
         scene: this._scene,
-        resourcePath: './resources/nature2/GLTF/',
+        resourcePath: '../GLTF/NATURE/',
         resourceName: 'Cloud' + index + '.glb',
         position: pos,
         scale: Math.random() * 5 + 10,
@@ -193,7 +193,7 @@ class HackNSlashDemo {
       const e = new entity.Entity();
       e.AddComponent(new gltf_component.StaticModelComponent({
         scene: this._scene,
-        resourcePath: './resources/nature/FBX/',
+        resourcePath: '../FBX/NATURE/',
         resourceName: name + '_' + index + '.fbx',
         scale: 0.25,
         emissive: new THREE.Color(0x000000),
@@ -249,7 +249,7 @@ class HackNSlashDemo {
     const girl = new entity.Entity();
     girl.AddComponent(new gltf_component.AnimatedModelComponent({
         scene: this._scene,
-        resourcePath: './resources/girl/',
+        resourcePath: '../FBX/GIRL/',
         resourceName: 'peasant_girl.fbx',
         resourceAnimation: 'Standing Idle.fbx',
         scale: 0.035,
