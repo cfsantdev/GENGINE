@@ -249,7 +249,6 @@ class HackNSlashDemo {
 
     const girl = new entity.Entity();
     const quest = new quest_component.QuestComponent();
-    quest._AddQuestToJournal({id: 'GETTING_STARTED', title: 'GETTING STARTED', text: 'Lets get started!!! The game is in development, well have news soon.'});
     girl.AddComponent(new gltf_component.AnimatedModelComponent({
         scene: this._scene,
         resourcePath: './FBX/GIRL/',
