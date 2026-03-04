@@ -108,7 +108,7 @@ export const player_entity = (() => {
         };
   
         const loader = new FBXLoader(this._manager);
-        loader.setPath('./resources/guard/');
+        loader.setPath('../FBX/GUARD/');
         loader.load('Sword And Shield Idle.fbx', (a) => { _OnLoad('idle', a); });
         loader.load('Sword And Shield Run.fbx', (a) => { _OnLoad('run', a); });
         loader.load('Sword And Shield Walk.fbx', (a) => { _OnLoad('walk', a); });
