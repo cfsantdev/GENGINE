@@ -162,7 +162,7 @@ class HackNSlashDemo {
       const e = new entity.Entity();
       e.AddComponent(new gltf_component.StaticModelComponent({
         scene: this._scene,
-        resourcePath: '../GLTF/NATURE/',
+        resourcePath: './GLTF/NATURE/',
         resourceName: 'Cloud' + index + '.glb',
         position: pos,
         scale: Math.random() * 5 + 10,
