@@ -1,4 +1,4 @@
-import {entity} from 'JS/entity.js';
+import {entity} from './entity.js';
 
 export const ui_controller = (() => {
   class UIController extends entity.Component {
