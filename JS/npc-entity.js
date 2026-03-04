@@ -89,7 +89,7 @@ export const npc_entity = (() => {
         this._target.position.y += 0.35;
         const texLoader = new THREE.TextureLoader();
         const texture = texLoader.load(
-            '../../PNG/MONSTERS/TEXTURES/' + this._params.resourceTexture);
+            './PNG/MONSTERS/TEXTURES/' + this._params.resourceTexture);
         texture.encoding = THREE.sRGBEncoding;
         texture.flipY = true;
 
