@@ -338,8 +338,9 @@ export const initializer = (() => {
 
     _InitializeMobs(num){
         console.log("Initialize Mobs...(14/17)");
+        const mobs = new monsters();
         for (let i = 0; i < num; ++i) {
-            const mobInfo = monsters[math.rand_int(0, monsters.length - 1)];
+            const mobInfo = mobs[math.rand_int(0, mobs.length - 1)];
       
             const mob = new entity.Entity();
             mob.AddComponent(new npc_entity.NPCController({
