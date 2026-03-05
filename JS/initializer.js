@@ -107,6 +107,7 @@ export const initializer = (() => {
     }
 
     _InitializeThree(){
+        console.log("Initialize Three...(1/17)");
         this._threejs = new THREE.WebGLRenderer({
             antialias: true,
         });
@@ -126,6 +127,7 @@ export const initializer = (() => {
     }
 
     _InitializeCamera(){
+        console.log("Initialize Camera...(2/17)");
         const fov = 60;
         const aspect = 1920 / 1080;
         const near = 1.0;
@@ -136,6 +138,7 @@ export const initializer = (() => {
     }
 
     _InitializeScene(){
+        console.log("Initialize Scene...(3/17)");
         this._scene = new THREE.Scene();
         this._scene.background = new THREE.Color(0xFFFFFF);
         this._scene.fog = new THREE.FogExp2(0x89b2eb, 0.002);
@@ -149,6 +152,7 @@ export const initializer = (() => {
     }
 
     _InitializeLights(){
+        console.log("Initialize Lights...(4/17)");
         let light = new THREE.DirectionalLight(0xFFFFFF, 1.0);
         light.position.set(-10, 500, 10);
         light.target.position.set(0, 0, 0);
@@ -167,6 +171,7 @@ export const initializer = (() => {
     }
 
     _InitializePlane(){
+        console.log("Initialize Plane...(5/17)");
         let plane = new THREE.Mesh(
             new THREE.PlaneGeometry(5000, 5000, 10, 10),
             new THREE.MeshStandardMaterial({
@@ -181,14 +186,17 @@ export const initializer = (() => {
     }
 
     _InitializeEntityManager(){
+        console.log("Initialize Entity Manager...(6/17)");
         this._entityManager = new entity_manager.EntityManager();
     }
 
     _InitializeGrid(){
+        console.log("Initialize Grid...(7/17)");
         this._grid = new spatial_hash_grid.SpatialHashGrid([[-1000, -1000], [1000, 1000]], [100, 100]);
     }
 
     _InitializeControllers(){
+        console.log("Initialize Controllers...(8/17)");
         this._uientity = new entity.Entity();
         this._uicontroller = new ui_controller.UIController();
         this._uientity.AddComponent(this._uicontroller);
@@ -196,6 +204,7 @@ export const initializer = (() => {
     }
 
     _InitializeLevelUpSpawner(){
+        console.log("Initialize Level Up Spawner..(9/17)");
         let levelUpEntity = new entity.Entity();
         levelUpEntity.AddComponent(new level_up_component.LevelUpComponentSpawner({
             camera: this._camera,
@@ -206,6 +215,7 @@ export const initializer = (() => {
     }
 
     _InitializeInventory(){
+        console.log("Initialize Inventory...(10/17)");
         let axe = new entity.Entity();
         axe.AddComponent(new inventory_controller.InventoryItem({
             type: 'weapon',
@@ -233,6 +243,7 @@ export const initializer = (() => {
     }
 
     _InitializeNPC(){
+        console.log("Initialize NPC...(11/17)");
         let npcEntity = new entity.Entity();
         npcEntity.AddComponent(new gltf_component.AnimatedModelComponent({
             scene: this._scene,
@@ -255,6 +266,7 @@ export const initializer = (() => {
     }
 
     _InitializeThirdPersonCamera(){
+        console.log("Initialize Third Person Camera...(12/17)");
         let camera = new entity.Entity();
         camera.AddComponent(
             new third_person_camera.ThirdPersonCamera({
@@ -267,6 +279,7 @@ export const initializer = (() => {
     }
 
     _InitializePlayer() {
+        console.log("Initialize Player...(13/17)");
         const params = {
           camera: this._camera,
           scene: this._scene,
@@ -318,6 +331,7 @@ export const initializer = (() => {
     }
 
     _InitializeMobs(num){
+        console.log("Initialize Mobs...(14/17)");
         for (let i = 0; i < num; ++i) {
             const mobInfo = monsters[math.rand_int(0, monsters.length - 1)];
       
@@ -354,6 +368,7 @@ export const initializer = (() => {
     }
 
     _InitializeSky(){
+        console.log("Initialize Sky...(15/17)");
         let hemiLight = new THREE.HemisphereLight(0xFFFFFF, 0xFFFFFFF, 0.6);
         hemiLight.color.setHSL(0.6, 1, 0.6);
         hemiLight.groundColor.setHSL(0.095, 1, 0.75);
@@ -384,6 +399,7 @@ export const initializer = (() => {
     }
 
     _InitializeClouds(num){
+        console.log("Initialize Clouds...(16/17)");
         for (let i = 0; i < num; ++i) {
             const index = math.rand_int(1, 3);
             const pos = new THREE.Vector3((math.random() * 2.0 - 1.0) * 500, 100, (math.random() * 2.0 - 1.0) * 500);
@@ -406,6 +422,7 @@ export const initializer = (() => {
     }
 
     _InitializeFoliage(num) {
+        console.log("Initialize Foliage...(17/17)");
         const names = [
             'CommonTree_Dead', 'CommonTree',
             'BirchTree', 'BirchTree_Dead',
