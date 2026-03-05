@@ -239,7 +239,7 @@ export const initializer = (() => {
             type: 'weapon',
             damage: 3,
             renderParams: {
-              name: 'Bow_Wooden',
+              name: 'Bow_Wooden2',
               scale: 0.25,
               icon: 'bow-arrow-64.png',
             },
