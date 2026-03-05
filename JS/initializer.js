@@ -368,7 +368,7 @@ export const initializer = (() => {
             mob.AddComponent(new spatial_grid_controller.SpatialGridController({grid: this._grid}));
             mob.AddComponent(new health_bar.HealthBar({ parent: this._scene, camera: this._camera }));
             mob.AddComponent(new attack_controller.AttackController({timing: 0.35}));
-            mob.SetPosition(new THREE.Vector3((math.random() * 2 - 1) * 500, 0, (math.random() * 2 - 1) * 500));
+            mob.SetPosition(new THREE.Vector3((Math.random() * 2 - 1) * 500, 0, (Math.random() * 2 - 1) * 500));
 
             this._entityManager.Add(mob);
         }
@@ -409,7 +409,7 @@ export const initializer = (() => {
         console.log("Initialize Clouds...(16/17)");
         for (let i = 0; i < num; ++i) {
             const index = math.rand_int(1, 3);
-            const pos = new THREE.Vector3((math.random() * 2.0 - 1.0) * 500, 100, (math.random() * 2.0 - 1.0) * 500);
+            const pos = new THREE.Vector3((Math.random() * 2.0 - 1.0) * 500, 100, (Math.random() * 2.0 - 1.0) * 500);
             const e = new entity.Entity();
             e.AddComponent(new gltf_component.StaticModelComponent({
                 scene: this._scene,
